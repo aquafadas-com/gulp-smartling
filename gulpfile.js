@@ -31,7 +31,11 @@ gulp.task('check', () => gulp.src('package.json')
 /**
  * Builds the documentation.
  */
-gulp.task('doc', ['doc:rename']);
+gulp.task('doc', ['doc:assets']);
+
+gulp.task('doc:assets', ['doc:rename'], () => gulp.src(['web/apple-touch-icon.png', 'web/favicon.ico'], {base: 'web'})
+  .pipe(gulp.dest('doc/api'))
+);
 
 gulp.task('doc:build', () => {
   let command = path.join('node_modules/.bin', process.platform == 'win32' ? 'jsdoc.cmd' : 'jsdoc');
