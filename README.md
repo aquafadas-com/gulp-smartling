@@ -50,5 +50,8 @@ gulp.task('i18n:upload', smartling.upload('path/to/i18n/en.json', {
 
 The provided file must be in American English (e.g. the `en-US` locale), as required by the [Smartling](https://www.smartling.com) service.
 
+## See Also
+- [API Reference](http://aquafadas-com.github.io/smartling.gulp/api)
+
 ## License
 [Smartling.gulp](https://github.com/aquafadas-com/smartling.gulp) is distributed under a proprietary license.
