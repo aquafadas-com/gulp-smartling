@@ -1,0 +1,2 @@
+Copyright (c) 2016 Aquafadas <opensource@aquafadas.com>
+All rights reserved.
