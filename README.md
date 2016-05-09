@@ -54,4 +54,4 @@ The provided file must be in American English (e.g. the `en-US` locale), as requ
 - [API Reference](http://aquafadas-com.github.io/smartling.gulp/api)
 
 ## License
-[Smartling.gulp](https://github.com/aquafadas-com/smartling.gulp) is distributed under a proprietary license.
+[Smartling.gulp](https://github.com/aquafadas-com/smartling.gulp) is distributed under the Apache License, version 2.0.
