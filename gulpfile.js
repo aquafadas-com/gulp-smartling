@@ -64,7 +64,7 @@ gulp.task('lint', () => gulp.src(['*.js', 'lib/*.js'])
  * @private
  */
 function _exec(command) {
-  return new Promise((resolve, reject) => child.exec(command, (err, stdout) => {
+  return new Promise((resolve, reject) => child.exec(command, {maxBuffer: 2 * 1024 * 1024}, (err, stdout) => {
     let output = stdout.trim();
     if(output.length) console.log(output);
     if(err) reject(err);
