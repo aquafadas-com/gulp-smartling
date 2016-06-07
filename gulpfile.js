@@ -45,7 +45,7 @@ gulp.task('doc:build', () => {
 gulp.task('doc:rename', ['doc:build'], () => new Promise((resolve, reject) =>
   fs.rename(`doc/${pkg.name}/${pkg.version}`, 'doc/api', err => {
     if(err) reject(err);
-    else del(`doc/${pkg.name}`, err => err ? reject(err) : resolve());
+    else del(`doc/${pkg.name}`).then(resolve, reject);
   })
 ));
 
