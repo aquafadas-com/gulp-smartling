@@ -1,5 +1,5 @@
 # Gulp-Smartling
-![Release](http://img.shields.io/npm/v/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dm/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/gulp-smartling.svg)
+![Release](http://img.shields.io/npm/v/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dm/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/gulp-smartling.svg) ![Code quality](https://img.shields.io/codacy/grade/792d23dc89bc4e91b4071e03ffb203ad.svg)
 
 [Gulp.js](http://gulpjs.com) tasks dedicated to the synchronization of translations with the [Smartling](https://www.smartling.com) service.
 
