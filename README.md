@@ -5,13 +5,13 @@
 
 ## Getting Started
 If you haven't used [Gulp.js](http://gulpjs.com) before, be sure to check out the [related documentation](https://github.com/gulpjs/gulp/blob/master/docs/README.md), as it explains how to create a `gulpfile.js` as well as install and use plugins.
-Once you're familiar with that process, you may install this plugin with this command:
+Once you're familiar with that process, you may install the provided Gulp tasks with this command:
 
 ```shell
-$ npm install gulp-smartling --save-dev
+$ npm install --save-dev gulp-smartling
 ```
 
-Once the plugin has been installed, it may be enabled inside your `gulpfile.js`.
+Once the build tasks have been installed, they may be enabled inside your `gulpfile.js`.
 
 ## Tasks
 
@@ -51,7 +51,7 @@ gulp.task('i18n:upload', smartling.upload('path/to/i18n/en.json', {
 The provided file must be in American English (e.g. the `en-US` locale), as required by the [Smartling](https://www.smartling.com) service.
 
 ## See Also
-- [API Reference](http://aquafadas-com.github.io/gulp-smartling)
+- [API Reference](https://aquafadas-com.github.io/gulp-smartling)
 - [Code Quality](https://www.codacy.com/app/aquafadas/gulp-smartling)
 
 ## License
