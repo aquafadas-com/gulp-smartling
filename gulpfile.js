@@ -14,6 +14,16 @@ const plugins = require('gulp-load-plugins')();
 const pkg = require('./package.json');
 
 /**
+ * The task settings.
+ * @var {object}
+ */
+const config = {
+  coverage: '792d23dc89bc4e91b4071e03ffb203ad',
+  output: `${pkg.name}-${pkg.version}.zip`,
+  sources: ['*.json', '*.md', '*.txt', 'lib/*.js']
+};
+
+/**
  * Runs the default tasks.
  */
 gulp.task('default', ['lint']);
@@ -26,6 +36,21 @@ gulp.task('check', () => gulp.src('package.json')
     console.error(err);
     this.emit('end');
   })
+);
+
+/**
+ * Deletes all generated files and reset any saved state.
+ */
+gulp.task('clean', () =>
+  del([`var/${config.output}`, 'var/*.info'])
+);
+
+/**
+ * Creates a distribution file for this program.
+ */
+gulp.task('dist', () => gulp.src(config.sources, {base: '.'})
+  .pipe(plugins.zip(config.output))
+  .pipe(gulp.dest('var'))
 );
 
 /**
@@ -60,11 +85,12 @@ gulp.task('lint', () => gulp.src(['*.js', 'lib/*.js'])
 /**
  * Runs a command and prints its output.
  * @param {string} command The command to run, with space-separated arguments.
+ * @param {object} [options] The settings to customize how the process is spawned.
  * @return {Promise.<string>} The command output when it is finally terminated.
  * @private
  */
-function _exec(command) {
-  return new Promise((resolve, reject) => child.exec(command, {maxBuffer: 2 * 1024 * 1024}, (err, stdout) => {
+function _exec(command, options) {
+  return new Promise((resolve, reject) => child.exec(command, options, (err, stdout) => {
     if(err) reject(err);
     else resolve(stdout.trim());
   }));

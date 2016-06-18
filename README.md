@@ -1,5 +1,5 @@
-# Smartling.gulp
-![Release](http://img.shields.io/npm/v/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dm/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/smartling.gulp.svg)
+# Gulp-Smartling
+![Release](http://img.shields.io/npm/v/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dm/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/gulp-smartling.svg)
 
 [Gulp.js](http://gulpjs.com) tasks dedicated to the synchronization of translations with the [Smartling](https://www.smartling.com) service.
 
@@ -25,7 +25,7 @@ const smartling = require('gulp-smartling');
 
 gulp.task('i18n:download', smartling.download('path/to/i18n/${locale}.json', {
   apiKey: 'MyApiKey',  // The Smartling API key.
-  fileUri: '/Smartling.gulp/messages.json', // The file URL.
+  fileUri: '/Gulp-Smartling/messages.json', // The file URL.
   locales: ['es', 'fr', 'ja', 'zh'], // The locales to be downloaded.
   projectId: 'FooBar' // The project identifier.
 }));
@@ -43,7 +43,7 @@ const smartling = require('gulp-smartling');
 gulp.task('i18n:upload', smartling.upload('path/to/i18n/en.json', {
   apiKey: 'MyApiKey', // The Smartling API key.
   fileType: 'json', // The file type: defaults to JSON.
-  fileUri: '/Smartling.gulp/messages.json', // The file URL.
+  fileUri: '/Gulp-Smartling/messages.json', // The file URL.
   projectId: 'FooBar' // The project identifier.
 }));
 ```
@@ -51,7 +51,8 @@ gulp.task('i18n:upload', smartling.upload('path/to/i18n/en.json', {
 The provided file must be in American English (e.g. the `en-US` locale), as required by the [Smartling](https://www.smartling.com) service.
 
 ## See Also
-- [API Reference](http://aquafadas-com.github.io/smartling.gulp)
+- [API Reference](http://aquafadas-com.github.io/gulp-smartling)
+- [Code Quality](https://www.codacy.com/app/aquafadas/gulp-smartling)
 
 ## License
-[Smartling.gulp](https://github.com/aquafadas-com/smartling.gulp) is distributed under the Apache License, version 2.0.
+[Gulp-Smartling](https://github.com/aquafadas-com/gulp-smartling) is distributed under the Apache License, version 2.0.

@@ -1,14 +1,14 @@
 {
   "description": "Gulp.js tasks dedicated to the synchronization of translations with the Smartling service.",
-  "homepage": "https://github.com/aquafadas-com/smartling.gulp",
+  "homepage": "https://github.com/aquafadas-com/gulp-smartling",
   "name": "gulp-smartling",
 
   "author": "Aquafadas <opensource@aquafadas.com>",
-  "bugs": "https://github.com/aquafadas-com/smartling.gulp/issues",
+  "bugs": "https://github.com/aquafadas-com/gulp-smartling/issues",
   "license": "Apache-2.0",
-  "main": "./lib/index",
-  "repository": "aquafadas-com/smartling.gulp",
-  "version": "0.1.1",
+  "main": "./lib/index.js",
+  "repository": "aquafadas-com/gulp-smartling",
+  "version": "0.1.2",
 
   "dependencies": {
     "smartling-sdk": "^0.2.2"
@@ -16,9 +16,10 @@
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-david": "^0.4.2",
+    "gulp-david": "^1.0.0",
     "gulp-jshint": "^2.0.1",
     "gulp-load-plugins": "^1.2.4",
+    "gulp-zip": "^3.2.0",
     "jsdoc": "^3.4.0",
     "jshint": "^2.9.2"
   },
@@ -46,6 +47,7 @@
     "gulp",
     "gulpplugin",
     "i18n",
-    "smartling"
+    "smartling",
+    "translation"
   ]
 }
