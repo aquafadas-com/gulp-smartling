@@ -1,5 +1,5 @@
 # Gulp-Smartling
-![Release](http://img.shields.io/npm/v/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dm/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/gulp-smartling.svg) ![Code quality](https://img.shields.io/codacy/grade/a694355860834f91b2072e49b2825106.svg)
+![Release](http://img.shields.io/npm/v/@aquafadas/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/@aquafadas/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dt/@aquafadas/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/gulp-smartling.svg) ![Code quality](https://img.shields.io/codacy/grade/a694355860834f91b2072e49b2825106.svg)
 
 [Gulp.js](http://gulpjs.com) tasks dedicated to the synchronization of translations with the [Smartling](https://www.smartling.com) service.
 
@@ -8,7 +8,7 @@ If you haven't used [Gulp.js](http://gulpjs.com) before, be sure to check out th
 Once you're familiar with that process, you may install the provided Gulp tasks with this command:
 
 ```shell
-$ npm install --save-dev gulp-smartling
+$ npm install --save-dev @aquafadas/gulp-smartling
 ```
 
 Once the build tasks have been installed, they may be enabled inside your `gulpfile.js`.
@@ -21,7 +21,7 @@ The `${locale}` placeholder will be replaced by the locale of each file.
 
 ```javascript
 const gulp = require('gulp');
-const smartling = require('gulp-smartling');
+const smartling = require('@aquafadas/gulp-smartling');
 
 gulp.task('i18n:download', smartling.download('path/to/i18n/${locale}.json', {
   apiKey: 'MyApiKey',  // The Smartling API key.
@@ -38,7 +38,7 @@ This task takes a path as input, specifying the message source to be uploaded.
 
 ```javascript
 const gulp = require('gulp');
-const smartling = require('gulp-smartling');
+const smartling = require('@aquafadas/gulp-smartling');
 
 gulp.task('i18n:upload', smartling.upload('path/to/i18n/en.json', {
   apiKey: 'MyApiKey', // The Smartling API key.
@@ -48,10 +48,9 @@ gulp.task('i18n:upload', smartling.upload('path/to/i18n/en.json', {
 }));
 ```
 
-The provided file must be in American English (e.g. the `en-US` locale), as required by the [Smartling](https://www.smartling.com) service.
+The provided file must be in American English (e.g. the `en-US` locale), as suggested by the [Smartling](https://www.smartling.com) service.
 
 ## See Also
-- [API Reference](https://aquafadas-com.github.io/gulp-smartling)
 - [Code Quality](https://www.codacy.com/app/aquafadas/gulp-smartling)
 
 ## License
