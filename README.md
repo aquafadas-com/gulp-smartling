@@ -1,7 +1,7 @@
 # Gulp-Smartling
 ![Release](http://img.shields.io/npm/v/@aquafadas/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/@aquafadas/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dt/@aquafadas/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/gulp-smartling.svg) ![Code quality](https://img.shields.io/codacy/grade/a694355860834f91b2072e49b2825106.svg)
 
-[Gulp.js](http://gulpjs.com) tasks dedicated to the synchronization of translations with the [Smartling](https://www.smartling.com) service.
+[Gulp.js](http://gulpjs.com) tasks dedicated to the synchronization of translations with the [Smartling](https://www.smartling.com) service, based on the [File API](http://docs.smartling.com/pages/API/v1/FileAPI).
 
 ## Getting Started
 If you haven't used [Gulp.js](http://gulpjs.com) before, be sure to check out the [related documentation](https://github.com/gulpjs/gulp/blob/master/docs/README.md), as it explains how to create a `gulpfile.js` as well as install and use plugins.

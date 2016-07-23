@@ -1,5 +1,5 @@
 {
-  "description": "Gulp.js tasks dedicated to the synchronization of translations with the Smartling service.",
+  "description": "Gulp.js tasks dedicated to the synchronization of translations with the Smartling service, based on the File API.",
   "homepage": "https://github.com/aquafadas-com/gulp-smartling",
   "name": "@aquafadas/gulp-smartling",
 
@@ -37,7 +37,6 @@
     "nonbsp": true,
     "nonew": true,
     "singleGroups": true,
-    "strict": "implied",
     "trailing": true,
     "typed": true,
     "undef": true,
