@@ -1,7 +1,7 @@
 {
   "description": "Gulp.js tasks dedicated to the synchronization of translations with the Smartling service.",
   "homepage": "https://github.com/aquafadas-com/gulp-smartling",
-  "name": "gulp-smartling",
+  "name": "@aquafadas/gulp-smartling",
 
   "author": "Aquafadas <opensource@aquafadas.com>",
   "bugs": "https://github.com/aquafadas-com/gulp-smartling/issues",
@@ -14,9 +14,9 @@
     "smartling-sdk": "^0.2.2"
   },
   "devDependencies": {
-    "del": "^2.2.0",
+    "@cedx/gulp-david": "^2.0.0",
+    "del": "^2.2.1",
     "gulp": "^3.9.1",
-    "gulp-david": "^1.0.0",
     "gulp-jshint": "^2.0.1",
     "gulp-load-plugins": "^1.2.4",
     "gulp-zip": "^3.2.0",
@@ -24,21 +24,22 @@
     "jshint": "^2.9.2"
   },
   "engines": {
-    "node": ">=4.4.0"
+    "node": ">=6.3.0"
   },
   "jshintConfig": {
-    "esnext": true,
+    "esversion": 6,
     "freeze": true,
     "futurehostile": true,
     "latedef": "nofunc",
-    "loopfunc": true,
-    "mocha": true,
+    "noarg": true,
     "nocomma": true,
     "node": true,
     "nonbsp": true,
     "nonew": true,
-    "strict": true,
+    "singleGroups": true,
+    "strict": "implied",
     "trailing": true,
+    "typed": true,
     "undef": true,
     "unused": true,
     "varstmt": true
