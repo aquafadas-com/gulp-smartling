@@ -14,7 +14,7 @@
     "smartling-sdk": "^0.2.2"
   },
   "devDependencies": {
-    "@cedx/gulp-david": "^2.0.0",
+    "@cedx/gulp-david": "^2.0.1",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
