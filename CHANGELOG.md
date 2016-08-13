@@ -1,6 +1,9 @@
 # Changelog
 This file contains highlights of what changes on each version of the [Gulp-Smartling](https://github.com/aquafadas-com/gulp-smartling) package.
 
+#### Version 0.3.0
+- Complete rewrite of the internal code: the external API is left unchanged.
+
 #### Version 0.2.0
 - Breaking change: raised the required [Node.js](https://nodejs.org) version.
 - Breaking change: using ES2015 features, like classes and default parameters.

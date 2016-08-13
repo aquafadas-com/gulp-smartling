@@ -1,7 +1,7 @@
 # Gulp-Smartling
 ![Release](http://img.shields.io/npm/v/@aquafadas/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/@aquafadas/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dt/@aquafadas/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/gulp-smartling.svg) ![Code quality](https://img.shields.io/codacy/grade/a694355860834f91b2072e49b2825106.svg)
 
-[Gulp.js](http://gulpjs.com) tasks dedicated to the synchronization of translations with the [Smartling](https://www.smartling.com) service, based on the [API v1](http://docs.smartling.com/pages/API/v1/FileAPI).
+[Gulp.js](http://gulpjs.com) tasks dedicated to the synchronization of translations with the [Smartling](https://www.smartling.com) service, based on the [File API v1](http://docs.smartling.com/pages/API/v1/FileAPI).
 
 ## Getting Started
 If you haven't used [Gulp.js](http://gulpjs.com) before, be sure to check out the [related documentation](https://github.com/gulpjs/gulp/blob/master/docs/README.md), as it explains how to create a `gulpfile.js` as well as install and use plugins.
@@ -28,6 +28,7 @@ gulp.task('i18n:download', smartling.download('path/to/i18n/${locale}.json', {
   fileUri: '/Gulp-Smartling/messages.json', // The file URL.
   locales: ['es', 'fr', 'ja', 'zh'], // The locales to be downloaded.
   projectId: 'FooBar' // The project identifier.
+  retrievalType: smartling.RetrievalType.PUBLISHED // The retrieval type: defaults to "published".
 }));
 ```
 
@@ -42,7 +43,7 @@ const smartling = require('@aquafadas/gulp-smartling');
 
 gulp.task('i18n:upload', smartling.upload('path/to/i18n/en.json', {
   apiKey: 'MyApiKey', // The Smartling API key.
-  fileType: 'json', // The file type: defaults to JSON.
+  fileType: smartling.FileType.JSON, // The file type: defaults to "json".
   fileUri: '/Gulp-Smartling/messages.json', // The file URL.
   projectId: 'FooBar' // The project identifier.
 }));
