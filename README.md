@@ -27,7 +27,7 @@ gulp.task('i18n:download', smartling.download('path/to/i18n/{{locale}}.json', {
   apiKey: 'MyApiKey',  // The Smartling API key.
   fileUri: '/Gulp-Smartling/messages.json', // The file URL.
   locales: ['es', 'fr', 'ja', 'zh'], // The locales to be downloaded.
-  projectId: 'FooBar' // The project identifier.
+  projectId: 'FooBar', // The project identifier.
   retrievalType: smartling.RetrievalType.PUBLISHED // The retrieval type: defaults to "published".
 }));
 ```
