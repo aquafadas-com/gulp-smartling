@@ -14,10 +14,9 @@ class LocaleTest {
    * Runs the unit tests.
    */
   run() {
-    let self = this;
-    describe('Locale', function() {
-      describe('locales', self.testLocales);
-      describe('getSpecificLocale()', self.testGetSpecificLocale);
+    describe('Locale', () => {
+      describe('locales', this.testLocales);
+      describe('getSpecificLocale()', this.testGetSpecificLocale);
     });
   }
 
