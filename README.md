@@ -17,13 +17,13 @@ Once the build tasks have been installed, they may be enabled inside your `gulpf
 
 #### Download the message translations from the Smartling service
 This task takes a pattern as input, indicating the target path of the downloaded files.
-The `${locale}` placeholder will be replaced by the locale of each file.
+The `{{locale}}` placeholder will be replaced by the locale of each file.
 
 ```javascript
 const gulp = require('gulp');
 const smartling = require('@aquafadas/gulp-smartling');
 
-gulp.task('i18n:download', smartling.download('path/to/i18n/${locale}.json', {
+gulp.task('i18n:download', smartling.download('path/to/i18n/{{locale}}.json', {
   apiKey: 'MyApiKey',  // The Smartling API key.
   fileUri: '/Gulp-Smartling/messages.json', // The file URL.
   locales: ['es', 'fr', 'ja', 'zh'], // The locales to be downloaded.
