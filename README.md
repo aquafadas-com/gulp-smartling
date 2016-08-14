@@ -1,5 +1,5 @@
 # Gulp-Smartling
-![Release](http://img.shields.io/npm/v/@aquafadas/gulp-smartling.svg) ![License](http://img.shields.io/npm/l/@aquafadas/gulp-smartling.svg) ![Downloads](http://img.shields.io/npm/dt/@aquafadas/gulp-smartling.svg) ![Dependencies](http://img.shields.io/david/aquafadas-com/gulp-smartling.svg) ![Code quality](https://img.shields.io/codacy/grade/a694355860834f91b2072e49b2825106.svg)
+![Release](https://img.shields.io/npm/v/@aquafadas/gulp-smartling.svg) ![License](https://img.shields.io/npm/l/@aquafadas/gulp-smartling.svg) ![Downloads](https://img.shields.io/npm/dt/@aquafadas/gulp-smartling.svg) ![Dependencies](https://img.shields.io/david/aquafadas-com/gulp-smartling.svg) ![Code quality](https://img.shields.io/codacy/grade/a694355860834f91b2072e49b2825106.svg) ![Build](https://img.shields.io/travis/aquafadas-com/gulp-smartling.svg)
 
 [Gulp.js](http://gulpjs.com) tasks dedicated to the synchronization of translations with the [Smartling](https://www.smartling.com) service, based on the [File API v1](http://docs.smartling.com/pages/API/v1/FileAPI).
 
@@ -53,6 +53,7 @@ The provided file must be in American English (e.g. the `en-US` locale), as sugg
 
 ## See Also
 - [Code Quality](https://www.codacy.com/app/aquafadas/gulp-smartling)
+- [Continuous Integration](https://travis-ci.org/aquafadas-com/gulp-smartling)
 
 ## License
-[Gulp-Smartling](https://github.com/aquafadas-com/gulp-smartling) is distributed under the Apache License, version 2.0.
+[Gulp-Smartling](https://www.npmjs.com/package/@aquafadas/gulp-smartling) is distributed under the Apache License, version 2.0.
