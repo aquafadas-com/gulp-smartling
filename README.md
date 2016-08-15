@@ -16,7 +16,7 @@ Once the build tasks have been installed, they may be enabled inside your `gulpf
 ## Tasks
 
 #### Download the message translations from the Smartling service
-This task takes a pattern as input, indicating the target path of the downloaded files.
+This task takes a file pattern as input, indicating the target path of the downloaded files.
 The `{{locale}}` placeholder will be replaced by the locale of each file.
 
 ```javascript
@@ -34,7 +34,7 @@ gulp.task('i18n:download', smartling.download('path/to/i18n/{{locale}}.json', {
 ```
 
 #### Upload the message source to the Smartling service
-This task takes a path as input, specifying the message source to be uploaded.
+This task takes a file path as input, specifying the message source to be uploaded.
 
 ```javascript
 const gulp = require('gulp');

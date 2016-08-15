@@ -3,8 +3,8 @@ This file contains highlights of what changes on each version of the [Gulp-Smart
 
 #### Version 0.3.0
 - Breaking change: complete rewrite of the source code.
-- Breaking change: renamed the `${locale}` placeholder of the download task to `{{locale}}`.
-- Breaking change: the `en`/`en-US` locales are not ignored anymore from the download task.
+- Download task: renamed the `${locale}` placeholder of the file pattern to `{{locale}}`.
+- Download task: the `en`/`en-US` locales are not ignored anymore.
 - Download task: added support for `includeOriginalStrings` parameter. 
 - Download task: added support for `retrievalType` parameter. 
 - Upload task: the file type is now optional. It is derived from the extension of the file URI.
