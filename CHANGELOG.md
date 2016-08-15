@@ -4,9 +4,16 @@ This file contains highlights of what changes on each version of the [Gulp-Smart
 #### Version 0.3.0
 - Breaking change: complete rewrite of the source code.
 - Breaking change: renamed the `${locale}` placeholder of the download task to `{{locale}}`.
-- Breaking change: the `en`/`en-US` locales are not ignored anymore from the download task. 
+- Breaking change: the `en`/`en-US` locales are not ignored anymore from the download task.
+- Download task: added support for `includeOriginalStrings` parameter. 
+- Download task: added support for `retrievalType` parameter. 
+- Upload task: the file type is now optional. It is derived from the extension of the file URI.
+- Upload task: added support for `authorize` parameter. 
+- Upload task: added support for `callbackUrl` parameter. 
 - Added some unit tests.
+- Added support for code coverage.
 - Added support for [Travis CI](https://travis-ci.org) continuous integration.
+- Upgraded the package dependencies.
 
 #### Version 0.2.0
 - Breaking change: raised the required [Node.js](https://nodejs.org) version.
