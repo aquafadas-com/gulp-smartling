@@ -18,7 +18,7 @@ const pkg = require('./package.json');
  */
 const config = {
   output: `${pkg.name}-${pkg.version}.zip`,
-  sources: ['*.json', '*.md', '*.txt', 'lib/*.js']
+  sources: ['*.json', '*.md', '*.txt', 'lib/**/*.js']
 };
 
 /**
@@ -53,6 +53,14 @@ gulp.task('clean', () =>
 );
 
 /**
+ * Sends the results of the code coverage.
+ */
+gulp.task('coverage', ['test'], () => {
+  let command = path.join('node_modules/.bin', process.platform == 'win32' ? 'codacy-coverage.cmd' : 'codacy-coverage');
+  return _exec(`${command} < var/lcov.info`);
+});
+
+/**
  * Creates a distribution file for this program.
  */
 gulp.task('dist', () => gulp.src(config.sources, {base: '.'})
@@ -84,9 +92,22 @@ gulp.task('doc:rename', ['doc:build'], () => new Promise((resolve, reject) =>
 /**
  * Performs static analysis of source code.
  */
-gulp.task('lint', () => gulp.src(['*.js', 'lib/*.js'])
+gulp.task('lint', () => gulp.src(['*.js', 'lib/**/*.js', 'test/**/*.js'])
   .pipe(plugins.jshint(pkg.jshintConfig))
   .pipe(plugins.jshint.reporter('default', {verbose: true}))
+);
+
+/**
+ * Runs the unit tests.
+ */
+gulp.task('test', ['test:coverage'], () => gulp.src(['test/**/*.js'], {read: false})
+  .pipe(plugins.mocha())
+  .pipe(plugins.istanbul.writeReports({dir: 'var', reporters: ['lcovonly']}))
+);
+
+gulp.task('test:coverage', () => gulp.src(['lib/**/*.js'])
+  .pipe(plugins.istanbul())
+  .pipe(plugins.istanbul.hookRequire())
 );
 
 /**

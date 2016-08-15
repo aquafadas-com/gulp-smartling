@@ -1,5 +1,5 @@
 {
-  "description": "Gulp.js tasks dedicated to the synchronization of translations with the Smartling service, based on the File API v1.",
+  "description": "Gulp.js tasks dedicated to the synchronization of translations with the Smartling service.",
   "homepage": "https://github.com/aquafadas-com/gulp-smartling",
   "name": "@aquafadas/gulp-smartling",
 
@@ -8,17 +8,20 @@
   "license": "Apache-2.0",
   "main": "./lib/index.js",
   "repository": "aquafadas-com/gulp-smartling",
-  "version": "0.2.0",
+  "version": "0.3.0",
 
   "dependencies": {
     "smartling-sdk": "^0.2.2"
   },
   "devDependencies": {
-    "@cedx/gulp-david": "^2.0.1",
-    "del": "^2.2.1",
+    "@cedx/gulp-david": "^2.0.3",
+    "codacy-coverage": "^2.0.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-istanbul": "^1.1.0",
     "gulp-jshint": "^2.0.1",
     "gulp-load-plugins": "^1.2.4",
+    "gulp-mocha": "^3.0.1",
     "gulp-zip": "^3.2.0",
     "jsdoc": "^3.4.0",
     "jshint": "^2.9.2"
@@ -31,6 +34,7 @@
     "freeze": true,
     "futurehostile": true,
     "latedef": "nofunc",
+    "mocha": true,
     "noarg": true,
     "nocomma": true,
     "node": true,
@@ -49,5 +53,9 @@
     "i18n",
     "smartling",
     "translation"
-  ]
+  ],
+  "scripts": {
+    "coverage": "codacy-coverage < var/lcov.info",
+    "test": "gulp test"
+  }
 }
