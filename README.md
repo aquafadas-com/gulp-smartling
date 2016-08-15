@@ -43,7 +43,7 @@ const smartling = require('@aquafadas/gulp-smartling');
 gulp.task('i18n:upload', smartling.upload('path/to/i18n/en-US.json', {
   apiKey: 'MyApiKey', // The Smartling API key.
   authorize: false, // Whether to authorize the file content in all locales.
-  callbackUri: null, // URL of the callback called when the file is 100% published for a locale.
+  callbackUrl: null, // URL of the callback called when the file is 100% published for a locale.
   fileType: smartling.FileType.JSON, // The file type.
   fileUri: '/Gulp-Smartling/messages.json', // The file URL.
   projectId: 'FooBar' // The project identifier.
