@@ -26,13 +26,12 @@ const smartling = require('@aquafadas/gulp-smartling');
 gulp.task('i18n:download', smartling.download('path/to/i18n/{{locale}}.json', {
   apiKey: 'MyApiKey',  // The Smartling API key.
   fileUri: '/Gulp-Smartling/messages.json', // The file URL.
-  locales: ['es', 'fr', 'ja', 'zh'], // The locales to be downloaded.
+  includeOriginalStrings: false, // Whether to return the original string when no translation is available.
+  locales: ['es-ES', 'fr-FR', 'ja-JP', 'zh-CN'], // The locales to be downloaded.
   projectId: 'FooBar', // The project identifier.
-  retrievalType: smartling.RetrievalType.PUBLISHED // The retrieval type: defaults to "published".
+  retrievalType: smartling.RetrievalType.PUBLISHED // The retrieval type.
 }));
 ```
-
-The English language will be ignored by this task: this is the default locale used by the the message sources.
 
 #### Upload the message source to the Smartling service
 This task takes a path as input, specifying the message source to be uploaded.
@@ -41,15 +40,15 @@ This task takes a path as input, specifying the message source to be uploaded.
 const gulp = require('gulp');
 const smartling = require('@aquafadas/gulp-smartling');
 
-gulp.task('i18n:upload', smartling.upload('path/to/i18n/en.json', {
+gulp.task('i18n:upload', smartling.upload('path/to/i18n/en-US.json', {
   apiKey: 'MyApiKey', // The Smartling API key.
-  fileType: smartling.FileType.JSON, // The file type: defaults to "json".
+  authorize: false, // Whether to authorize the file content in all locales.
+  callbackUri: null, // URL of the callback called when the file is 100% published for a locale.
+  fileType: smartling.FileType.JSON, // The file type.
   fileUri: '/Gulp-Smartling/messages.json', // The file URL.
   projectId: 'FooBar' // The project identifier.
 }));
 ```
-
-The provided file must be in American English (e.g. the `en-US` locale), as suggested by the [Smartling](https://www.smartling.com) service.
 
 ## See Also
 - [Code Quality](https://www.codacy.com/app/aquafadas/gulp-smartling)
