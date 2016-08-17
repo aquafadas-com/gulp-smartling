@@ -1,6 +1,9 @@
 # Changelog
 This file contains highlights of what changes on each version of the [Gulp-Smartling](https://www.npmjs.com/package/@aquafadas/gulp-smartling) package.
 
+#### Version 0.3.1
+- Fixed a bug with the boolean properties of the tasks.
+
 #### Version 0.3.0
 - Breaking change: complete rewrite of the source code.
 - Download task: renamed the `${locale}` placeholder of the file pattern to `{{locale}}`.
