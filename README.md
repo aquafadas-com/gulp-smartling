@@ -14,7 +14,7 @@ $ npm install --save-dev @aquafadas/gulp-smartling
 Once the build tasks have been installed, they may be enabled inside your `gulpfile.js`.
 
 ## Tasks
-All file-based tasks require at three properties:
+All file-based tasks require three properties:
 
 - `apiKey: string` : The Smartling API key.
 - `fileUri: string` : A value that uniquely identifies the remote file.
