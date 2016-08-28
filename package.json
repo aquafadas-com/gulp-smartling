@@ -55,7 +55,10 @@
     "translation"
   ],
   "scripts": {
+    "check": "david",
     "coverage": "codacy-coverage < var/lcov.info",
+    "doc": "jsdoc --configure=doc/jsdoc.json",
+    "lint": "gulp lint",
     "test": "gulp test"
   }
 }
