@@ -1,6 +1,10 @@
 # Changelog
 This file contains highlights of what changes on each version of the [Gulp-Smartling](https://www.npmjs.com/package/@aquafadas/gulp-smartling) package.
 
+#### Version 0.4.0
+- Breaking change: raised the required [Node.js](https://nodejs.org) version.
+- Updated the package dependencies.
+
 #### Version 0.3.1
 - Fixed a bug with the boolean properties of the tasks.
 
@@ -16,7 +20,7 @@ This file contains highlights of what changes on each version of the [Gulp-Smart
 - Added some unit tests.
 - Added support for code coverage.
 - Added support for [Travis CI](https://travis-ci.org) continuous integration.
-- Upgraded the package dependencies.
+- Updated the package dependencies.
 
 #### Version 0.2.0
 - Breaking change: raised the required [Node.js](https://nodejs.org) version.
@@ -26,11 +30,11 @@ This file contains highlights of what changes on each version of the [Gulp-Smart
 #### Version 0.1.2
 - Added support for [Codacy](https://www.codacy.com) code analyzer.
 - Renamed the project according to its [npm](https://www.npmjs.com) package name.
-- Upgraded the package dependencies.
+- Updated the package dependencies.
 
 #### Version 0.1.1
 - Fixed some bugs.
-- Upgraded the package dependencies.
+- Updated the package dependencies.
 
 #### Version 0.1.0
 - Initial release.
