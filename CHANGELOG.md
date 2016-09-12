@@ -3,6 +3,9 @@ This file contains highlights of what changes on each version of the [Gulp-Smart
 
 #### Version 0.4.0
 - Breaking change: raised the required [Node.js](https://nodejs.org) version.
+
+#### Version 0.3.2
+- Fixed a bug with the download task whose promise was resolved too soon.
 - Updated the package dependencies.
 
 #### Version 0.3.1
