@@ -6,7 +6,7 @@
   "author": "Aquafadas <opensource@aquafadas.com>",
   "bugs": "https://github.com/aquafadas-com/gulp-smartling/issues",
   "license": "Apache-2.0",
-  "main": "./lib/index.js",
+  "main": "./lib",
   "repository": "aquafadas-com/gulp-smartling",
   "version": "0.4.0",
 
@@ -27,7 +27,7 @@
     "jshint": "^2.9.3"
   },
   "engines": {
-    "node": ">=6.5.0"
+    "node": ">=6.6.0"
   },
   "jshintConfig": {
     "esversion": 6,
