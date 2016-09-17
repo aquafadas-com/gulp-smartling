@@ -16,7 +16,7 @@ class FileTaskTest {
    */
   run() {
     describe('FileTask', () => {
-      describe('locales', this.testGetFileTypeFromUri);
+      describe('getFileTypeFromUri()', this.testGetFileTypeFromUri);
     });
   }
 
