@@ -17,7 +17,7 @@ Once the build tasks have been installed, they may be enabled inside your `gulpf
 All file-based tasks require three properties:
 
 - `apiKey: string` : The Smartling API key.
-- `fileUri: string` : A value that uniquely identifies the remote file.
+- `fileURI: string` : A value that uniquely identifies the remote file.
 - `projectId: string` : The project identifier.
 
 The other properties are optional.
@@ -32,7 +32,7 @@ const smartling = require('@aquafadas/gulp-smartling');
 
 gulp.task('i18n:download', smartling.download('path/to/i18n/{{locale}}.json', {
   apiKey: 'MyApiKey',  // The Smartling API key.
-  fileUri: '/Gulp-Smartling/messages.json', // The file URL.
+  fileURI: '/Gulp-Smartling/messages.json', // The file URL.
   includeOriginalStrings: false, // Whether to return the original string when no translation is available.
   locales: ['es-ES', 'fr-FR', 'ja-JP', 'zh-CN'], // The locales to be downloaded (required).
   projectId: 'FooBar', // The project identifier.
@@ -50,9 +50,9 @@ const smartling = require('@aquafadas/gulp-smartling');
 gulp.task('i18n:upload', smartling.upload('path/to/i18n/en-US.json', {
   apiKey: 'MyApiKey', // The Smartling API key.
   authorize: false, // Whether to authorize the file content in all locales.
-  callbackUrl: null, // URL of the callback called when the file is 100% published for a locale.
+  callbackURL: null, // URL of the callback called when the file is 100% published for a locale.
   fileType: smartling.FileType.JSON, // The file type.
-  fileUri: '/Gulp-Smartling/messages.json', // The file URL.
+  fileURI: '/Gulp-Smartling/messages.json', // The file URL.
   projectId: 'FooBar' // The project identifier.
 }));
 ```

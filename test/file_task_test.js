@@ -16,24 +16,24 @@ class FileTaskTest {
    */
   run() {
     describe('FileTask', () => {
-      describe('getFileTypeFromUri()', this.testGetFileTypeFromUri);
+      describe('getFileTypeFromURI()', this.testGetFileTypeFromURI);
     });
   }
 
   /**
-   * Tests the `getFileTypeFromUri` method.
+   * Tests the `getFileTypeFromURI` method.
    */
-  testGetFileTypeFromUri() {
+  testGetFileTypeFromURI() {
     it('should return an emtpy string for an unknown file extension', () => {
-      assert.equal(FileTask.getFileTypeFromUri('/fooBar'), '');
-      assert.equal(FileTask.getFileTypeFromUri('/foo.bar'), '');
+      assert.equal(FileTask.getFileTypeFromURI('/fooBar'), '');
+      assert.equal(FileTask.getFileTypeFromURI('/foo.bar'), '');
     });
 
     it('should return the proper type for a known file extension', () => {
-      assert.equal(FileTask.getFileTypeFromUri('/messages.csv'), FileType.CSV);
-      assert.equal(FileTask.getFileTypeFromUri('/project/messages.json'), FileType.JSON);
-      assert.equal(FileTask.getFileTypeFromUri('messages.properties'), FileType.JAVA_PROPERTIES);
-      assert.equal(FileTask.getFileTypeFromUri('project/messages.xlf'), FileType.XLIFF);
+      assert.equal(FileTask.getFileTypeFromURI('/messages.csv'), FileType.CSV);
+      assert.equal(FileTask.getFileTypeFromURI('/project/messages.json'), FileType.JSON);
+      assert.equal(FileTask.getFileTypeFromURI('messages.properties'), FileType.JAVA_PROPERTIES);
+      assert.equal(FileTask.getFileTypeFromURI('project/messages.xlf'), FileType.XLIFF);
     });
   }
 }
