@@ -28,24 +28,6 @@
   "engines": {
     "node": ">=6.8.0"
   },
-  "jshintConfig": {
-    "esversion": 6,
-    "freeze": true,
-    "futurehostile": true,
-    "latedef": "nofunc",
-    "mocha": true,
-    "noarg": true,
-    "nocomma": true,
-    "node": true,
-    "nonbsp": true,
-    "nonew": true,
-    "singleGroups": true,
-    "trailing": true,
-    "typed": true,
-    "undef": true,
-    "unused": true,
-    "varstmt": true
-  },
   "keywords": [
     "gulp",
     "gulpplugin",
