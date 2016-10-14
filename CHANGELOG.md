@@ -3,6 +3,8 @@ This file contains highlights of what changes on each version of the [Gulp-Smart
 
 #### Version 0.4.0
 - Breaking change: raised the required [Node.js](https://nodejs.org) version.
+- Added a build task for fixing the coding standards issues.
+- Replaced [JSHint](http://jshint.com) linter by [ESLint](http://eslint.org).
 
 #### Version 0.3.2
 - Fixed a bug with the download task whose promise was resolved too soon.
