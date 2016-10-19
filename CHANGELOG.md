@@ -1,8 +1,9 @@
 # Changelog
 This file contains highlights of what changes on each version of the [Gulp-Smartling](https://www.npmjs.com/package/@aquafadas/gulp-smartling) package.
 
-#### Version 0.4.0
+#### Version 1.0.0
 - Breaking change: raised the required [Node.js](https://nodejs.org) version.
+- Breaking change: changed the naming convention of some methods.
 - Added a build task for fixing the coding standards issues.
 - Replaced [JSHint](http://jshint.com) linter by [ESLint](http://eslint.org).
 
