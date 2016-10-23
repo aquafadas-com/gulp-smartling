@@ -22,7 +22,7 @@ All file-based tasks require three properties:
 
 The other properties are optional.
 
-#### Download the message translations from the Smartling service
+### Download the message translations from the Smartling service
 This task takes a file pattern as input, indicating the target path of the downloaded files.
 The `{{locale}}` placeholder will be replaced by the locale of each file.
 
@@ -40,7 +40,7 @@ gulp.task('i18n:download', smartling.download('path/to/i18n/{{locale}}.json', {
 }));
 ```
 
-#### Upload the message source to the Smartling service
+### Upload the message source to the Smartling service
 This task takes a file path as input, specifying the message source to be uploaded.
 
 ```javascript

@@ -1,20 +1,23 @@
 # Changelog
 This file contains highlights of what changes on each version of the [Gulp-Smartling](https://www.npmjs.com/package/@aquafadas/gulp-smartling) package.
 
-#### Version 1.0.0
+## Version 1.1.0
+- Replaced [JSDoc](http://usejsdoc.org) documentation generator by [ESDoc](https://esdoc.org).
+
+## Version 1.0.0
 - Breaking change: raised the required [Node.js](https://nodejs.org) version.
 - Breaking change: changed the naming convention of some methods.
 - Added a build task for fixing the coding standards issues.
 - Replaced [JSHint](http://jshint.com) linter by [ESLint](http://eslint.org).
 
-#### Version 0.3.2
+## Version 0.3.2
 - Fixed a bug with the download task whose promise was resolved too soon.
 - Updated the package dependencies.
 
-#### Version 0.3.1
+## Version 0.3.1
 - Fixed a bug with the boolean properties of the tasks.
 
-#### Version 0.3.0
+## Version 0.3.0
 - Breaking change: complete rewrite of the source code.
 - Download task: renamed the `${locale}` placeholder of the file pattern to `{{locale}}`.
 - Download task: the `en`/`en-US` locales are not ignored anymore.
@@ -28,19 +31,19 @@ This file contains highlights of what changes on each version of the [Gulp-Smart
 - Added support for [Travis CI](https://travis-ci.org) continuous integration.
 - Updated the package dependencies.
 
-#### Version 0.2.0
+## Version 0.2.0
 - Breaking change: raised the required [Node.js](https://nodejs.org) version.
 - Breaking change: using ES2015 features, like classes and default parameters.
 - Turned the package into a [scoped one](https://docs.npmjs.com/getting-started/scoped-packages).
 
-#### Version 0.1.2
+## Version 0.1.2
 - Added support for [Codacy](https://www.codacy.com) code analyzer.
 - Renamed the project according to its [npm](https://www.npmjs.com) package name.
 - Updated the package dependencies.
 
-#### Version 0.1.1
+## Version 0.1.1
 - Fixed some bugs.
 - Updated the package dependencies.
 
-#### Version 0.1.0
+## Version 0.1.0
 - Initial release.
