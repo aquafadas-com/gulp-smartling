@@ -1,7 +1,7 @@
 {
-  "title": "Aquafadas Translation Console",
+  "title": "Gulp-Smartling",
 
-  "source": "lib",
+  "source": "src",
   "destination": "doc/api",
 
   "manual": {
