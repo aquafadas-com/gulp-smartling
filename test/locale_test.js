@@ -1,6 +1,5 @@
 /**
  * Implementation of the `LocaleTest` class.
- * @module test/locale_test
  */
 const assert = require('assert');
 const {Locale} = require('../lib/core');
