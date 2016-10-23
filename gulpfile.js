@@ -1,12 +1,10 @@
 /**
  * Provides tasks for [Gulp.js](http://gulpjs.com) build system.
- * @module gulpfile
  */
 'use strict';
 
 const child = require('child_process');
 const del = require('del');
-const fs = require('fs');
 const gulp = require('gulp');
 const loadPlugins = require('gulp-load-plugins');
 const path = require('path');
@@ -14,7 +12,7 @@ const pkg = require('./package.json');
 
 /**
  * The task settings.
- * @constant {object}
+ * @type {object}
  */
 const config = {
   output: `${pkg.name}-${pkg.version}.zip`,
@@ -23,7 +21,7 @@ const config = {
 
 /**
  * The task plugins.
- * @constant {object}
+ * @type {object}
  */
 const plugins = loadPlugins({
   pattern: ['gulp-*', '@*/gulp-*'],
@@ -33,7 +31,15 @@ const plugins = loadPlugins({
 /**
  * Runs the default tasks.
  */
-gulp.task('default', ['lint']);
+gulp.task('default', ['build']);
+
+/**
+ * Builds the client scripts.
+ */
+gulp.task('build', () => gulp.src('src/**/*.js')
+  .pipe(plugins.babel({comments: false, plugins: ['transform-es2015-modules-commonjs']}))
+  .pipe(gulp.dest('lib'))
+);
 
 /**
  * Checks the package dependencies.
@@ -71,22 +77,15 @@ gulp.task('dist', () => gulp.src(config.sources, {base: '.'})
 /**
  * Builds the documentation.
  */
-gulp.task('doc', ['doc:build'], () => new Promise((resolve, reject) =>
-  fs.rename(`doc/${pkg.name}/${pkg.version}`, 'doc/api', err => {
-    if (err) reject(err);
-    else del('doc/@aquafadas').then(resolve, reject);
-  })
-));
-
-gulp.task('doc:build', () => {
-  let command = path.join('node_modules/.bin', process.platform == 'win32' ? 'jsdoc.cmd' : 'jsdoc');
-  return del('doc/api').then(() => _exec(`${command} --configure doc/jsdoc.json`));
+gulp.task('doc', () => {
+  let command = path.join('node_modules/.bin', process.platform == 'win32' ? 'esdoc.cmd' : 'esdoc');
+  return del('doc/api').then(() => _exec(`${command} -c doc/esdoc.json`));
 });
 
 /**
  * Fixes the coding standards issues.
  */
-gulp.task('fix', () => gulp.src(['*.js', 'lib/**/*.js', 'test/**/*.js'], {base: '.'})
+gulp.task('fix', () => gulp.src(['*.js', 'src/**/*.js', 'test/**/*.js'], {base: '.'})
   .pipe(plugins.eslint({fix: true}))
   .pipe(gulp.dest('.'))
 );
@@ -94,7 +93,7 @@ gulp.task('fix', () => gulp.src(['*.js', 'lib/**/*.js', 'test/**/*.js'], {base: 
 /**
  * Performs static analysis of source code.
  */
-gulp.task('lint', () => gulp.src(['*.js', 'lib/**/*.js', 'test/**/*.js'])
+gulp.task('lint', () => gulp.src(['*.js', 'src/**/*.js', 'test/**/*.js'])
   .pipe(plugins.eslint())
   .pipe(plugins.eslint.format())
   .pipe(plugins.eslint.failAfterError())
@@ -117,8 +116,7 @@ gulp.task('test:coverage', () => gulp.src(['lib/**/*.js'])
  * Runs a command and prints its output.
  * @param {string} command The command to run, with space-separated arguments.
  * @param {object} [options] The settings to customize how the process is spawned.
- * @returns {Promise.<string>} The command output when it is finally terminated.
- * @private
+ * @return {Promise<string>} The command output when it is finally terminated.
  */
 function _exec(command, options = {}) {
   return new Promise((resolve, reject) => child.exec(command, options, (err, stdout) => {
