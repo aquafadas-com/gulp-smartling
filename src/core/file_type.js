@@ -1,13 +1,12 @@
 /**
  * Implementation of the `FileType` enumeration.
- * @module core/file_type
  */
 
 /**
  * Defines the type of a file to be uploaded.
  * @enum {string}
  */
-const FileType = {
+export const FileType = {
 
   /**
    * The file is an Android XML resource.
@@ -94,5 +93,3 @@ const FileType = {
    */
   YAML: 'yaml'
 };
-
-module.exports = Object.freeze(FileType);
