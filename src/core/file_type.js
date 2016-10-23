@@ -1,8 +1,4 @@
 /**
- * Implementation of the `FileType` enumeration.
- */
-
-/**
  * Defines the type of a file to be uploaded.
  * @enum {string}
  */

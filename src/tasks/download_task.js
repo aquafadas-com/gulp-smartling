@@ -1,6 +1,3 @@
-/**
- * Implementation of the `API` class.
- */
 import {Locale, RetrievalType} from '../core';
 import {FileTask} from './file_task';
 import SmartlingSdk from 'smartling-sdk';

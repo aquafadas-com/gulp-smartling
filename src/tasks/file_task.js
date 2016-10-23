@@ -1,6 +1,3 @@
-/**
- * Implementation of the `FileTask` class.
- */
 import {API, FileType} from '../core';
 import path from 'path';
 

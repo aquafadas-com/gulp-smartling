@@ -1,6 +1,3 @@
-/**
- * Implementation of the `UploadTask` class.
- */
 import {FileTask} from './file_task';
 import SmartlingSdk from 'smartling-sdk';
 
