@@ -1,6 +1,7 @@
 /**
- * An enumeration defining the type of a file to be uploaded.
+ * Defines the type of a file to be uploaded.
  * @type {object}
+ *
  * @property {string} ANDROID The file is an Android XML resource.
  * @property {string} CSV The file is a CSV resource.
  * @property {string} GETTEXT The file is a Gettext PO/POT resource.

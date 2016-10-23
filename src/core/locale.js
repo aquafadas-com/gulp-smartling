@@ -32,8 +32,8 @@ const LOCALES = {
 export class Locale {
 
   /**
-   * Returns an object providing the mapping between neutral locales and default specific locales.
-   * @return {object} The mapping between neutral locales and default specific locales.
+   * The mapping between neutral locales and default specific locales.
+   * @type {object}
    */
   static get locales() {
     return LOCALES;
