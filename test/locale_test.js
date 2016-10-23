@@ -1,8 +1,8 @@
 /**
  * Implementation of the `LocaleTest` class.
  */
-const assert = require('assert');
-const {Locale} = require('../lib/core');
+import assert from 'assert';
+import {Locale} from '../src/core';
 
 /**
  * Tests the features of the `Locale` class.
