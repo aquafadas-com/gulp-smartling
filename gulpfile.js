@@ -1,5 +1,6 @@
 'use strict';
 
+/* TODO: better handling of Babel */
 process.env.BABEL_DISABLE_CACHE = true;
 require('babel-register');
 
