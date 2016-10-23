@@ -6,6 +6,7 @@
 const child = require('child_process');
 const del = require('del');
 const gulp = require('gulp');
+const isparta = require('isparta');
 const loadPlugins = require('gulp-load-plugins');
 const path = require('path');
 const pkg = require('./package.json');
@@ -102,13 +103,13 @@ gulp.task('lint', () => gulp.src(['*.js', 'src/**/*.js', 'test/**/*.js'])
 /**
  * Runs the unit tests.
  */
-gulp.task('test', ['test:coverage'], () => gulp.src(['test/**/*.js'], {read: false})
-  .pipe(plugins.mocha())
+gulp.task('test', ['test:instrument'], () => gulp.src(['test/**/*.js'], {read: false})
+  .pipe(plugins.mocha({require: ['babel-register']}))
   .pipe(plugins.istanbul.writeReports({dir: 'var', reporters: ['lcovonly']}))
 );
 
-gulp.task('test:coverage', () => gulp.src(['lib/**/*.js'])
-  .pipe(plugins.istanbul())
+gulp.task('test:instrument', () => gulp.src(['src/**/*.js'])
+  .pipe(plugins.istanbul({instrumenter: isparta.Instrumenter}))
   .pipe(plugins.istanbul.hookRequire())
 );
 

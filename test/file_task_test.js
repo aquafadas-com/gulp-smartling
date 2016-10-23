@@ -1,9 +1,9 @@
 /**
  * Implementation of the `FileTaskTest` class.
  */
-const assert = require('assert');
-const {FileType} = require('../lib/core');
-const {FileTask} = require('../lib/tasks');
+import assert from 'assert';
+import {FileType} from '../src/core';
+import {FileTask} from '../src/tasks';
 
 /**
  * Tests the features of the `FileTask` class.
