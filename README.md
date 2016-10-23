@@ -62,4 +62,4 @@ gulp.task('i18n:upload', smartling.upload('path/to/i18n/en-US.json', {
 - [Continuous Integration](https://travis-ci.org/aquafadas-com/gulp-smartling)
 
 ## License
-[Gulp-Smartling](https://www.npmjs.com/package/@aquafadas/gulp-smartling) is distributed under the Apache License, version 2.0.
+[Gulp-Smartling](https://github.com/aquafadas-com/gulp-smartling) is distributed under the Apache License, version 2.0.

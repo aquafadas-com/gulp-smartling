@@ -1,5 +1,5 @@
 # Changelog
-This file contains highlights of what changes on each version of the [Gulp-Smartling](https://www.npmjs.com/package/@aquafadas/gulp-smartling) package.
+This file contains highlights of what changes on each version of the [Gulp-Smartling](https://github.com/aquafadas-com/gulp-smartling) package.
 
 ## Version 2.0.0
 - Breaking change: ported the [CommonJS](https://nodejs.org/api/modules.html) modules to ES2015 format.
