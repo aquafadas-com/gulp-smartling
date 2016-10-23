@@ -1,91 +1,40 @@
 /**
- * Defines the type of a file to be uploaded.
- * @enum {string}
+ * An enumeration defining the type of a file to be uploaded.
+ * @type {object}
+ * @property {string} ANDROID The file is an Android XML resource.
+ * @property {string} CSV The file is a CSV resource.
+ * @property {string} GETTEXT The file is a Gettext PO/POT resource.
+ * @property {string} HTML The file is an HTML resource.
+ * @property {string} INDESIGN The file is a InDesign Markup Language resource.
+ * @property {string} IOS_STRINGS The file is an iOS Strings resource.
+ * @property {string} IOS_STRINGS_DICT The file is an iOS Strings Dictionary resource.
+ * @property {string} JAVA_PROPERTIES The file is a Java Properties resource.
+ * @property {string} JSON The file is a JSON resource.
+ * @property {string} MADCAP_LINGO The file is a MadCap Lingo ZIP resource.
+ * @property {string} OPEN_XML The file is an Office Open XML resource.
+ * @property {string} PLAIN_TEXT The file is a plain text resource.
+ * @property {string} QT_LINGUIST The file is a QT Linguist resource.
+ * @property {string} RESX The file is a Microsoft Resx resource.
+ * @property {string} XLIFF The file is a XLIFF resource.
+ * @property {string} XML The file is a custom XML resource.
+ * @property {string} YAML The file is a YAML resource.
  */
 export const FileType = {
-
-  /**
-   * The file is an Android XML resource.
-   */
   ANDROID: 'android',
-
-  /**
-   * The file is a CSV resource.
-   */
   CSV: 'csv',
-
-  /**
-   * The file is a Gettext PO/POT resource.
-   */
   GETTEXT: 'gettext',
-
-  /**
-   * The file is an HTML resource.
-   */
   HTML: 'html',
-
-  /**
-   * The file is a InDesign Markup Language resource.
-   */
   INDESIGN: 'idml',
-
-  /**
-   * The file is an iOS Strings resource.
-   */
   IOS_STRINGS: 'ios',
-
-  /**
-   * The file is an iOS Strings Dictionary resource.
-   */
   IOS_STRINGS_DICT: 'stringsdict',
-
-  /**
-   * The file is a Java Properties resource.
-   */
   JAVA_PROPERTIES: 'javaProperties',
-
-  /**
-   * The file is a JSON resource.
-   */
   JSON: 'json',
-
-  /**
-   * The file is a MadCap Lingo ZIP resource.
-   */
   MADCAP_LINGO: 'madcap',
-
-  /**
-   * The file is an Office Open XML resource.
-   */
   OPEN_XML: 'docx',
-
-  /**
-   * The file is a plain text resource.
-   */
   PLAIN_TEXT: 'plainText',
-
-  /**
-   * The file is a QT Linguist resource.
-   */
   QT_LINGUIST: 'qt',
-
-  /**
-   * The file is a Microsoft Resx resource.
-   */
   RESX: 'resx',
-
-  /**
-   * The file is a XLIFF resource.
-   */
   XLIFF: 'xliff',
-
-  /**
-   * The file is a custom XML resource.
-   */
   XML: 'xml',
-
-  /**
-   * The file is a YAML resource.
-   */
   YAML: 'yaml'
 };

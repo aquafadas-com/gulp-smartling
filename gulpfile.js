@@ -1,4 +1,6 @@
 'use strict';
+
+process.env.BABEL_DISABLE_CACHE = true;
 require('babel-register');
 
 const child = require('child_process');
