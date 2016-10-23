@@ -2,7 +2,7 @@
  * Implementation of the `LocaleTest` class.
  */
 import assert from 'assert';
-import {Locale} from '../src/core';
+import {Locale} from '../../src/core';
 
 /**
  * Tests the features of the `Locale` class.
