@@ -1,11 +1,10 @@
 /**
  * Implementation of the `Locale` class.
- * @module core/locale
  */
 
 /**
  * Provides the mapping between neutral locales and default specific locales.
- * @constant {object}
+ * @type {object}
  */
 const LOCALES = {
   af: 'af-ZA', az: 'az-AZ',
@@ -34,11 +33,11 @@ const LOCALES = {
 /**
  * Provides static methods for locales.
  */
-module.exports = class Locale {
+export class Locale {
 
   /**
    * Returns an object providing the mapping between neutral locales and default specific locales.
-   * @returns {object} The mapping between neutral locales and default specific locales.
+   * @return {object} The mapping between neutral locales and default specific locales.
    */
   static get locales() {
     return LOCALES;
@@ -47,9 +46,9 @@ module.exports = class Locale {
   /**
    * Returns the default specific locale corresponding to the specified neutral locale.
    * @param {string} neutralLocale A neutral locale.
-   * @returns {string} The default specific locale corresponding to the specified neutral locale, or the neutral locale if no specific locale matches.
+   * @return {string} The default specific locale corresponding to the specified neutral locale, or the neutral locale if no specific locale matches.
    */
   static getSpecificLocale(neutralLocale) {
     return neutralLocale in LOCALES ? LOCALES[neutralLocale] : neutralLocale;
   }
-};
+}

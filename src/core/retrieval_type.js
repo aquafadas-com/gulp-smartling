@@ -1,13 +1,12 @@
 /**
  * Implementation of the `RetrievalType` enumeration.
- * @module core/retrieval_type
  */
 
 /**
  * Defines the retrieval type of a file to be downloaded.
  * @enum {string}
  */
-const RetrievalType = {
+export const RetrievalType = {
 
   /**
    * Returns a modified version of the original file with strings wrapped in a specific set of Unicode symbols that can later be recognized and matched by the Chrome Context Capture Extension.
@@ -29,5 +28,3 @@ const RetrievalType = {
    */
   PUBLISHED: 'published'
 };
-
-module.exports = Object.freeze(RetrievalType);

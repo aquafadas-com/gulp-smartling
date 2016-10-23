@@ -1,12 +1,11 @@
 /**
  * Implementation of the `API` class.
- * @module core/api
  */
 
 /**
  * Provides common properties and methods for the [Gulp.js](http://gulpjs.com) tasks related to the [Smartling](https://www.smartling.com) service.
  */
-module.exports = class API {
+export class API {
 
   /**
    * Initializes a new instance of the class.
@@ -26,4 +25,4 @@ module.exports = class API {
      */
     this.projectId = typeof options.projectId == 'string' ? options.projectId : '';
   }
-};
+}

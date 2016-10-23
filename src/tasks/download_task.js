@@ -1,15 +1,14 @@
 /**
  * Implementation of the `API` class.
- * @module tasks/download_task
  */
-const {Locale, RetrievalType} = require('../core');
-const FileTask = require('./file_task');
-const SmartlingSdk = require('smartling-sdk');
+import {Locale, RetrievalType} from '../core';
+import {FileTask} from './file_task';
+import SmartlingSdk from 'smartling-sdk';
 
 /**
  * Downloads the message translations from the [Smartling](https://www.smartling.com) server.
  */
-module.exports = class DownloadTask extends FileTask {
+export class DownloadTask extends FileTask {
 
   /**
    * Initializes a new instance of the class.
@@ -33,7 +32,6 @@ module.exports = class DownloadTask extends FileTask {
     /**
      * The download parameters.
      * @type {object}
-     * @private
      */
     this._params = {};
     if (typeof options.includeOriginalStrings == 'boolean') this.includeOriginalStrings = options.includeOriginalStrings;
@@ -42,7 +40,7 @@ module.exports = class DownloadTask extends FileTask {
 
   /**
    * Gets a value indicating whether to return the original string or an empty string when no translation is available.
-   * @returns {boolean} `true` if the original string is returned when no translation is available, otherwise `false`.
+   * @return {boolean} `true` if the original string is returned when no translation is available, otherwise `false`.
    */
   get includeOriginalStrings() {
     return this._params.includeOriginalStrings == 'true';
@@ -50,7 +48,7 @@ module.exports = class DownloadTask extends FileTask {
 
   /**
    * Gets the desired format for the download.
-   * @returns {string} The desired format for the download.
+   * @return {string} The desired format for the download.
    */
   get retrievalType() {
     return typeof this._params.retrievalType == 'string' ? this._params.retrievalType : RetrievalType.PUBLISHED;
@@ -74,7 +72,7 @@ module.exports = class DownloadTask extends FileTask {
 
   /**
    * Downloads the message translations from the Smartling server.
-   * @returns {Promise} Completes when the message translations have been downloaded.
+   * @return {Promise} Completes when the message translations have been downloaded.
    */
   run() {
     let fileApi = new SmartlingSdk(SmartlingSdk.API_BASE_URLS.LIVE, this.apiKey, this.projectId);
@@ -82,4 +80,4 @@ module.exports = class DownloadTask extends FileTask {
       locale: Locale.getSpecificLocale(locale)
     }, this._params))));
   }
-};
+}

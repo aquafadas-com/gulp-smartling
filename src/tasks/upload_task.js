@@ -1,14 +1,13 @@
 /**
  * Implementation of the `UploadTask` class.
- * @module tasks/upload_task
  */
-const FileTask = require('./file_task');
-const SmartlingSdk = require('smartling-sdk');
+import {FileTask} from './file_task';
+import SmartlingSdk from 'smartling-sdk';
 
 /**
  * Uploads the message translations to the [Smartling](https://www.smartling.com) server.
  */
-module.exports = class UploadTask extends FileTask {
+export class UploadTask extends FileTask {
 
   /**
    * Initializes a new instance of the class.
@@ -32,7 +31,6 @@ module.exports = class UploadTask extends FileTask {
     /**
      * The upload parameters.
      * @type {object}
-     * @private
      */
     this._params = {};
     if (typeof options.authorize == 'boolean') this.authorize = options.authorize;
@@ -41,7 +39,7 @@ module.exports = class UploadTask extends FileTask {
 
   /**
    * Gets a value indicating whether content in the file is authorized (available for translation) in all locales.
-   * @returns {boolean} `true` if content in the file is authorized, otherwise `false`.
+   * @return {boolean} `true` if content in the file is authorized, otherwise `false`.
    */
   get authorize() {
     return this._params.approved == 'true';
@@ -49,7 +47,7 @@ module.exports = class UploadTask extends FileTask {
 
   /**
    * Gets the URL of the callback called when the file is 100% published for a locale.
-   * @returns {string} The URL of the callback called when the file is 100% published for a locale.
+   * @return {string} The URL of the callback called when the file is 100% published for a locale.
    */
   get callbackURL() {
     return typeof this._params.callbackUrl == 'string' ? this._params.callbackUrl : '';
@@ -73,11 +71,11 @@ module.exports = class UploadTask extends FileTask {
 
   /**
    * Uploads the message translations to the Smartling server.
-   * @returns {Promise} Completes when the message file has been uploaded.
+   * @return {Promise} Completes when the message file has been uploaded.
    */
   run() {
     let fileApi = new SmartlingSdk(SmartlingSdk.API_BASE_URLS.LIVE, this.apiKey, this.projectId);
     let fileType = this.fileType.length ? this.fileType : FileTask.getFileTypeFromURI(this.fileURI);
     return fileApi.upload(this.file, this.fileURI, fileType, this._params);
   }
-};
+}

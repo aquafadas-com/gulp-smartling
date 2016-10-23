@@ -1,14 +1,13 @@
 /**
  * Implementation of the `FileTask` class.
- * @module tasks/file_task
  */
-const {API, FileType} = require('../core');
-const path = require('path');
+import {API, FileType} from '../core';
+import path from 'path';
 
 /**
  * Provides the base implementation for file-based tasks.
  */
-module.exports = class FileTask extends API {
+export class FileTask extends API {
 
   /**
    * Initializes a new instance of the class.
@@ -27,7 +26,7 @@ module.exports = class FileTask extends API {
   /**
    * Returns the file type corresponding to the specified file URI.
    * @param {string} fileURI The file URI.
-   * @returns {string} The file type corresponding to the specified file URI, or an empty string if the type is unknown.
+   * @return {string} The file type corresponding to the specified file URI, or an empty string if the type is unknown.
    */
   static getFileTypeFromURI(fileURI) {
     let extension = path.extname(fileURI).substr(1).toLowerCase();
@@ -60,4 +59,4 @@ module.exports = class FileTask extends API {
         return '';
     }
   }
-};
+}
