@@ -1,0 +1,14 @@
+{
+  "title": "Aquafadas Translation Console",
+
+  "source": "lib",
+  "destination": "doc/api",
+
+  "manual": {
+    "changelog": ["CHANGELOG.md"]
+  },
+  "test": {
+    "source": "test",
+    "type": "mocha"
+  }
+}
