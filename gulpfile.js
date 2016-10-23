@@ -2,6 +2,7 @@
  * Provides tasks for [Gulp.js](http://gulpjs.com) build system.
  */
 'use strict';
+require('babel-register');
 
 const child = require('child_process');
 const del = require('del');
@@ -104,7 +105,7 @@ gulp.task('lint', () => gulp.src(['*.js', 'src/**/*.js', 'test/**/*.js'])
  * Runs the unit tests.
  */
 gulp.task('test', ['test:instrument'], () => gulp.src(['test/**/*.js'], {read: false})
-  .pipe(plugins.mocha({require: ['babel-register']}))
+  .pipe(plugins.mocha())
   .pipe(plugins.istanbul.writeReports({dir: 'var', reporters: ['lcovonly']}))
 );
 
