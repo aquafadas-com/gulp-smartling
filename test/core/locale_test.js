@@ -1,6 +1,3 @@
-/**
- * Implementation of the `LocaleTest` class.
- */
 import assert from 'assert';
 import {Locale} from '../../src/core';
 
