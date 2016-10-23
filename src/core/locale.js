@@ -1,8 +1,4 @@
 /**
- * Implementation of the `Locale` class.
- */
-
-/**
  * Provides the mapping between neutral locales and default specific locales.
  * @type {object}
  */

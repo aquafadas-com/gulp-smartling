@@ -1,6 +1,3 @@
-/**
- * Provides tasks for [Gulp.js](http://gulpjs.com) build system.
- */
 'use strict';
 require('babel-register');
 

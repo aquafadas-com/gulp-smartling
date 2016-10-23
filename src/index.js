@@ -1,6 +1,3 @@
-/**
- * Package entry point.
- */
 import {DownloadTask, UploadTask} from './tasks';
 export {FileType, RetrievalType} from './core';
 

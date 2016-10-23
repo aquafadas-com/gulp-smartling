@@ -1,8 +1,4 @@
 /**
- * Implementation of the `API` class.
- */
-
-/**
  * Provides common properties and methods for the [Gulp.js](http://gulpjs.com) tasks related to the [Smartling](https://www.smartling.com) service.
  */
 export class API {

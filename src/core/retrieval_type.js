@@ -1,8 +1,4 @@
 /**
- * Implementation of the `RetrievalType` enumeration.
- */
-
-/**
  * Defines the retrieval type of a file to be downloaded.
  * @enum {string}
  */
