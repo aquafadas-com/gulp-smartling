@@ -1,8 +1,11 @@
 * text=auto
 
+.babelrc text
 .editorconfig text
+.eslintrc.json
 .gitattributes text
 .gitignore text
+.travis.yml
 
 *.js text
 *.json text

@@ -37,7 +37,7 @@ gulp.task('default', ['build']);
  * Builds the client scripts.
  */
 gulp.task('build', () => gulp.src('src/**/*.js')
-  .pipe(plugins.babel({comments: false, plugins: ['transform-es2015-modules-commonjs']}))
+  .pipe(plugins.babel())
   .pipe(gulp.dest('lib'))
 );
 
