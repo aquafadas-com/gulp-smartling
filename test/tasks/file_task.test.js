@@ -3,23 +3,14 @@ import {FileType} from '../../src/core';
 import {FileTask} from '../../src/tasks';
 
 /**
- * Tests the features of the `FileTask` class.
+ * @test {FileTask}
  */
-class FileTaskTest {
+describe('FileTask', () => {
 
   /**
-   * Runs the unit tests.
+   * @test {FileTask.getFileTypeFromURI}
    */
-  run() {
-    describe('FileTask', () => {
-      describe('getFileTypeFromURI()', this.testGetFileTypeFromURI);
-    });
-  }
-
-  /**
-   * Tests the `getFileTypeFromURI` method.
-   */
-  testGetFileTypeFromURI() {
+  describe('.getFileTypeFromURI()', () => {
     it('should return an emtpy string for an unknown file extension', () => {
       assert.equal(FileTask.getFileTypeFromURI('/fooBar'), '');
       assert.equal(FileTask.getFileTypeFromURI('/foo.bar'), '');
@@ -31,8 +22,5 @@ class FileTaskTest {
       assert.equal(FileTask.getFileTypeFromURI('messages.properties'), FileType.JAVA_PROPERTIES);
       assert.equal(FileTask.getFileTypeFromURI('project/messages.xlf'), FileType.XLIFF);
     });
-  }
-}
-
-// Run all tests.
-new FileTaskTest().run();
+  });
+});

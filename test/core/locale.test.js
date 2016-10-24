@@ -2,24 +2,14 @@ import assert from 'assert';
 import {Locale} from '../../src/core';
 
 /**
- * Tests the features of the `Locale` class.
+ * @test {Locale}
  */
-class LocaleTest {
+describe('Locale', () => {
 
   /**
-   * Runs the unit tests.
+   * @test {Locale.locales}
    */
-  run() {
-    describe('Locale', () => {
-      describe('locales', this.testLocales);
-      describe('getSpecificLocale()', this.testGetSpecificLocale);
-    });
-  }
-
-  /**
-   * Tests the `locales` property.
-   */
-  testLocales() {
+  describe('.locales', () => {
     it('should have only [2-letter] neutral locales as keys', () => {
       let neutralLocales = Object.keys(Locale.locales);
       assert.equal(neutralLocales.filter(locale => /^[a-z]{2}$/.test(locale)).length, neutralLocales.length);
@@ -29,12 +19,12 @@ class LocaleTest {
       let specificLocales = Object.keys(Locale.locales).map(locale => Locale.locales[locale]);
       assert.equal(specificLocales.filter(locale => /^[a-z]{2}-[A-Z]{2}$/.test(locale)).length, specificLocales.length);
     });
-  }
+  });
 
   /**
-   * Tests the `getSpecificLocale` method.
+   * @test {Locale.getSpecificLocale}
    */
-  testGetSpecificLocale() {
+  describe('.getSpecificLocale()', () => {
     it('should return the specified value if it is an unknown locale', () =>
       assert.equal(Locale.getSpecificLocale('fooBar'), 'fooBar')
     );
@@ -48,8 +38,5 @@ class LocaleTest {
       assert.equal(Locale.getSpecificLocale('en'), 'en-US');
       assert.equal(Locale.getSpecificLocale('fr'), 'fr-FR');
     });
-  }
-}
-
-// Run all tests.
-new LocaleTest().run();
+  });
+});
