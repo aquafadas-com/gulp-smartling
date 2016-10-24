@@ -58,6 +58,7 @@ gulp.task('i18n:upload', smartling.upload('path/to/i18n/en-US.json', {
 ```
 
 ## See Also
+- [API Reference](https://aquafadas-com.github.io/gulp-smartling)
 - [Code Quality](https://www.codacy.com/app/aquafadas/gulp-smartling)
 - [Continuous Integration](https://travis-ci.org/aquafadas-com/gulp-smartling)
 
