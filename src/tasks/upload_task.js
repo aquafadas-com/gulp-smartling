@@ -35,16 +35,16 @@ export class UploadTask extends FileTask {
   }
 
   /**
-   * Gets a value indicating whether content in the file is authorized (available for translation) in all locales.
-   * @return {boolean} `true` if content in the file is authorized, otherwise `false`.
+   * Value indicating whether content in the file is authorized (available for translation) in all locales.
+   * @type {boolean}
    */
   get authorize() {
     return this._params.approved == 'true';
   }
 
   /**
-   * Gets the URL of the callback called when the file is 100% published for a locale.
-   * @return {string} The URL of the callback called when the file is 100% published for a locale.
+   * The URL of the callback called when the file is 100% published for a locale.
+   * @type {string}
    */
   get callbackURL() {
     return typeof this._params.callbackUrl == 'string' ? this._params.callbackUrl : '';

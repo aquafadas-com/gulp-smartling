@@ -36,16 +36,16 @@ export class DownloadTask extends FileTask {
   }
 
   /**
-   * Gets a value indicating whether to return the original string or an empty string when no translation is available.
-   * @return {boolean} `true` if the original string is returned when no translation is available, otherwise `false`.
+   * Value indicating whether to return the original string or an empty string when no translation is available.
+   * @type {boolean}
    */
   get includeOriginalStrings() {
     return this._params.includeOriginalStrings == 'true';
   }
 
   /**
-   * Gets the desired format for the download.
-   * @return {string} The desired format for the download.
+   * The desired format for the download.
+   * @type {string}
    */
   get retrievalType() {
     return typeof this._params.retrievalType == 'string' ? this._params.retrievalType : RetrievalType.PUBLISHED;
