@@ -3,7 +3,6 @@
 const child = require('child_process');
 const del = require('del');
 const gulp = require('gulp');
-const isparta = require('isparta');
 const loadPlugins = require('gulp-load-plugins');
 const path = require('path');
 const pkg = require('./package.json');
@@ -106,7 +105,7 @@ gulp.task('test', ['test:instrument'], () => gulp.src(['test/**/*.js'], {read: f
 );
 
 gulp.task('test:instrument', ['test:setup'], () => gulp.src(['src/**/*.js'])
-  .pipe(plugins.istanbul({instrumenter: isparta.Instrumenter}))
+  .pipe(plugins.istanbul({instrumenter: require('isparta').Instrumenter}))
   .pipe(plugins.istanbul.hookRequire())
 );
 
