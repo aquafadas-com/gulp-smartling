@@ -1,9 +1,5 @@
 'use strict';
 
-/* TODO: better handling of Babel */
-process.env.BABEL_DISABLE_CACHE = true;
-require('babel-register');
-
 const child = require('child_process');
 const del = require('del');
 const gulp = require('gulp');
@@ -109,10 +105,16 @@ gulp.task('test', ['test:instrument'], () => gulp.src(['test/**/*.js'], {read: f
   .pipe(plugins.istanbul.writeReports({dir: 'var', reporters: ['lcovonly']}))
 );
 
-gulp.task('test:instrument', () => gulp.src(['src/**/*.js'])
+gulp.task('test:instrument', ['test:setup'], () => gulp.src(['src/**/*.js'])
   .pipe(plugins.istanbul({instrumenter: isparta.Instrumenter}))
   .pipe(plugins.istanbul.hookRequire())
 );
+
+gulp.task('test:setup', () => new Promise(resolve => {
+  process.env.BABEL_DISABLE_CACHE = process.platform == 'win32' ? '0' : '1';
+  require('babel-register');
+  resolve();
+}));
 
 /**
  * Runs a command and prints its output.
