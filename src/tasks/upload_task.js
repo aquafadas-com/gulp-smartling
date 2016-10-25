@@ -67,8 +67,8 @@ export class UploadTask extends FileTask {
   }
 
   /**
-   * Uploads the message translations to the Smartling server.
-   * @return {Promise} Completes when the message file has been uploaded.
+   * Uploads the original source content to the Smartling server.
+   * @return {Promise} Completes when the source file has been uploaded.
    */
   run() {
     let fileApi = new SmartlingSdk(SmartlingSdk.API_BASE_URLS.LIVE, this.apiKey, this.projectId);

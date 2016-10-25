@@ -15,7 +15,7 @@ describe('Locale', () => {
       assert.equal(neutralLocales.filter(locale => /^[a-z]{2}$/.test(locale)).length, neutralLocales.length);
     });
 
-    it('should have only [2-letter]-[2-letter] specific locales as values', () => {
+    it('should have only [2-letter]-[2-LETTER] specific locales as values', () => {
       let specificLocales = Object.keys(Locale.locales).map(locale => Locale.locales[locale]);
       assert.equal(specificLocales.filter(locale => /^[a-z]{2}-[A-Z]{2}$/.test(locale)).length, specificLocales.length);
     });

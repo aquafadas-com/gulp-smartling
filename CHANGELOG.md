@@ -1,6 +1,9 @@
 # Changelog
 This file contains highlights of what changes on each version of the [Gulp-Smartling](https://github.com/aquafadas-com/gulp-smartling) package.
 
+## Version 2.0.1
+- Fixed [GitHub issue #2](https://github.com/aquafadas-com/gulp-smartling/issues/2).
+
 ## Version 2.0.0
 - Breaking change: ported the [CommonJS](https://nodejs.org/api/modules.html) modules to ES2015 format.
 - Breaking change: replaced the test classes by plain tests.
