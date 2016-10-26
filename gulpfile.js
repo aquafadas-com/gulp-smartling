@@ -41,12 +41,13 @@ gulp.task('build', () => gulp.src('src/**/*.js')
 /**
  * Checks the package dependencies.
  */
-gulp.task('check', () => gulp.src('package.json')
-  .pipe(plugins.cedx.david()).on('error', function(err) {
+gulp.task('check', () => {
+  const {david} = plugins.cedx.david;
+  return gulp.src('package.json').pipe(david()).on('error', function(err) {
     console.error(err);
     this.emit('end');
-  })
-);
+  });
+});
 
 /**
  * Deletes all generated files and reset any saved state.
