@@ -31,7 +31,7 @@ const plugins = loadPlugins({
 gulp.task('default', ['build']);
 
 /**
- * Builds the client scripts.
+ * Builds the sources.
  */
 gulp.task('build', () => gulp.src('src/**/*.js')
   .pipe(plugins.babel())

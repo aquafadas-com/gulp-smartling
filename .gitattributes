@@ -11,3 +11,6 @@
 *.json text
 *.md text
 *.txt text
+
+*.ico binary
+*.png binary
