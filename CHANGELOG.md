@@ -7,7 +7,6 @@ This file contains highlights of what changes on each version of the [Gulp-Smart
 ## Version 2.0.0
 - Breaking change: ported the [CommonJS](https://nodejs.org/api/modules.html) modules to ES2015 format.
 - Breaking change: replaced the test classes by plain tests.
-- Externalized the [Babel](https://babeljs.io) settings.
 - Replaced [JSDoc](http://usejsdoc.org) documentation generator by [ESDoc](https://esdoc.org).
 
 ## Version 1.0.0
