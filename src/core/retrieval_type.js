@@ -7,9 +7,9 @@
  * @property {string} PSEUDO Returns a modified version of the original text with certain characters transformed and the text expanded.
  * @property {string} PUBLISHED Returns only published/pre-published translations.
  */
-export const RetrievalType = {
+export const RetrievalType = Object.freeze({
   CONTEXT_MATCHING_INSTRUMENTED: 'contextMatchingInstrumented',
   PENDING: 'pending',
   PSEUDO: 'pseudo',
   PUBLISHED: 'published'
-};
+});

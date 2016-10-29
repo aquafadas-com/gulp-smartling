@@ -20,7 +20,7 @@
  * @property {string} XML The file is a custom XML resource.
  * @property {string} YAML The file is a YAML resource.
  */
-export const FileType = {
+export const FileType = Object.freeze({
   ANDROID: 'android',
   CSV: 'csv',
   GETTEXT: 'gettext',
@@ -38,4 +38,4 @@ export const FileType = {
   XLIFF: 'xliff',
   XML: 'xml',
   YAML: 'yaml'
-};
+});
