@@ -1,5 +1,5 @@
 import assert from 'assert';
-import {Locale} from '../src/locale';
+import {Locale} from '../src/index';
 
 /**
  * @test {Locale}

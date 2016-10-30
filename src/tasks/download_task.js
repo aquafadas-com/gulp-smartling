@@ -1,4 +1,4 @@
-import {Locale, RetrievalType} from '../core';
+import {Locale, RetrievalType} from '../index';
 import {FileTask} from './file_task';
 import SmartlingSdk from 'smartling-sdk';
 

@@ -1,6 +1,8 @@
 import {DownloadTask, UploadTask} from './tasks/index';
 
+export * from './api';
 export * from './file_type';
+export * from './locale';
 export * from './retrieval_type';
 
 /**

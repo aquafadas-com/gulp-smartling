@@ -1,4 +1,4 @@
-import {API, FileType} from '../core';
+import {API, FileType} from '../index';
 import path from 'path';
 
 /**

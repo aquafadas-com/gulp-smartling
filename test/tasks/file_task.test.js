@@ -1,5 +1,5 @@
 import assert from 'assert';
-import {FileType} from '../../src/file_type';
+import {FileType} from '../../src/index';
 import {FileTask} from '../../src/tasks/index';
 
 /**
