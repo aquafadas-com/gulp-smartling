@@ -1,6 +1,6 @@
 import assert from 'assert';
-import {FileType} from '../../src/core';
-import {FileTask} from '../../src/tasks';
+import {FileType} from '../../src/file_type';
+import {FileTask} from '../../src/tasks/index';
 
 /**
  * @test {FileTask}

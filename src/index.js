@@ -1,5 +1,7 @@
-import {DownloadTask, UploadTask} from './tasks';
-export {FileType, RetrievalType} from './core';
+import {DownloadTask, UploadTask} from './tasks/index';
+
+export * from './file_type';
+export * from './retrieval_type';
 
 /**
  * Downloads the message translations from the Smartling server.
