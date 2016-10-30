@@ -6,9 +6,11 @@
   "author": "Aquafadas <opensource@aquafadas.com>",
   "bugs": "https://github.com/aquafadas-com/gulp-smartling/issues",
   "license": "Apache-2.0",
-  "main": "./lib",
   "repository": "aquafadas-com/gulp-smartling",
   "version": "2.0.1",
+  
+  "jsnext:main": "./src/index",
+  "main": "./lib/index",
 
   "dependencies": {
     "smartling-sdk": "^0.2.2"
